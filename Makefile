@@ -6,7 +6,7 @@ PROG_PORT=usb
 
 TARGET=nixie.hex
 
-OBJ=
+OBJ=can_handler.c can/can.c can/spi.c
 
 FORMAT=ihex
 OBJCOPY=avr-objcopy
