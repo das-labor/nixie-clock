@@ -16,7 +16,7 @@
 
 #define SPI_PORT PORTB
 #define SPI_PIN PORTB
-#define SPI_DDR DDRD
+#define SPI_DDR DDRB
 #define SPI_PIN_MISO PB6
 #define SPI_PIN_SCK PB7
 

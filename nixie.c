@@ -54,7 +54,7 @@ ISR(TIMER1_COMPA_vect)
 
 	_delay_us(54.5); /* wait safe time before switching the anodes */
 
-	PORTD &= 0x03; 
+	PORTD &= 0x07; 
 	PORTD |= bcdNibble << 3; /* activate cathode selected by BCD value */
 	PORTB |= matrixSelect; /* activate matching anode */
 }
@@ -81,7 +81,7 @@ void setup(void) {
 	 * PD2 = DCF-Input Signal Pull-Up (INT0)
 	 * PD3-PD6 = BCD Character Cathode Outputs */
 	DDRD = 0x78;
-	PORTD = 0x07; /* cathode outputs off */
+	PORTD = 0x00; /* cathode outputs off */
 
 	/* run Timer 1 with prescaler CLK/64 (every interrupt each 2 ms) */
 	TCCR1A = 0;
