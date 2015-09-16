@@ -73,8 +73,9 @@ void time_request(void) {
 
 void setup(void) {
 	/* PB0-PB5 = Character Anodes
-	 * PB6-PB7 = Outputs */
-	DDRB = 0xFF;
+	 * PB6 = Input
+	 * PB7 = Output */
+	DDRB = 0xBF;
 	PORTB = 0x00; /* anode outputs off */
 
 	/* PD0-PD1 = Inputs Pull-Up
